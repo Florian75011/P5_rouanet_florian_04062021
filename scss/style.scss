@@ -1,0 +1,12 @@
+// Import - Pour remplacer les variables de Bootstrap, vous devez importer le ou les fichiers pertinents du répertoire :
+@import "variable_overrides";   // fichier des variables
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+/*
+orange, rose, violet
+rgba(243, 233, 241, var(--tw-bg-opacity))
+$primary: #22A1ED;
+$dark: #04040C;
+$headings-color: #284876;
+$card-bg: #FCFCFC;
+*/

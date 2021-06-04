@@ -12,6 +12,7 @@
   "author": "Florian R.",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^5.0.1",
     "express": "^4.16.4",
     "uuid": "^3.3.2"
   },

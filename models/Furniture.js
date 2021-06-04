@@ -1,3 +1,4 @@
+// Code cloné chez OpenClassRooms :
 const furnitures = [
   {
     "varnish": [

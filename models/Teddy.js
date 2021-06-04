@@ -1,3 +1,4 @@
+// Code cloné chez OpenClassRooms :
 const teddies = [
   {
     "colors": ["Tan", "Chocolate", "Black", "White"],

@@ -1,10 +1,13 @@
 <!doctype html>
 <html>
-    <head>
-        <title>My project</title>
-    </head>
-    <body>
-        <script src="./dist/polyfill.bundle.js"></script>
-        <script src="./dist/app.bundle.js"></script>
-    </body>
+<head>
+    <title>My project</title>
+</head>
+<body>
+    <!-- Ajout de Babel pour transpiler le code JS (adaptations plus anciennes) : -->
+    <script src="/polyfill.bundle.js"></script>
+    <!-- Appel du package bundle.js (minifiy, package, sépare en fichiers, accès à des bibliothèques) : -->
+    <script src="/app.bundle.js"></script>
+    <!-- Ce chemin permet l'utilisation d'un serveur "localhost" avec "npm start" testant notre code et rechargeant automatiquement le navigateur après modification -->
+</body>
 </html>

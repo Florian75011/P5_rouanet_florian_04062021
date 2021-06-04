@@ -1,3 +1,4 @@
+// Méthode d'appel JS moderne de 2018 et ajout de la librairie query.js :
 import retrieveContent from './query.js';
 
 async function showContent() {

@@ -15,3 +15,5 @@ async function showContent() {
 }
 
 showContent();
+
+// Coder la fonction du bouton entrer pour passer à la page liste-ours.

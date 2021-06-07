@@ -10,3 +10,34 @@ $dark: #04040C;
 $headings-color: #284876;
 $card-bg: #FCFCFC;
 */
+
+.bg-pinkORI {
+    background-color: rgb(242, 234, 240);
+}
+
+.purpleORI {
+    color: #5100ff;
+}
+
+.orangeORI {
+    color: #fd7e14;
+}
+
+.disable-link {
+    text-decoration: none;
+}
+
+header div.navbar.navbar-dark div.container button.navbar-toggler {
+    background-color: #5100ff;
+}
+
+.footerORI {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background-color: rgb(242, 234, 240);
+}
+
+.btn-outline-ORI:hover {
+    background-color: rgb(242, 234, 240);
+}

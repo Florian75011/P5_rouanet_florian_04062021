@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <title>Orinoco - Site e-commerce, boutique en ligne.</title>
+    <!-- L'ensemble des balises metas -->
+    <meta name="keywords" content="Orinoco, site e-commerce, achats en ligne, site web, stratégie marketing, France">
+    <meta name="description" content="Orinoco est un site e-commerce de vente de produits en ligne.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow">
+    <!-- Les balises de liens -->
+    <link rel="shortcut icon" type="image/png" href="./img/favicon.png">
+    <!-- Lien du fichier CSS compilé via SASS et Bootsrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<!-- Une page “produit”, qui affiche de manière dynamique l'élément sélectionné par l'utilisateur et lui permet de personnaliser le produit et de l'ajouter à son panier ; -->
+
+<body>
+    <!-- En tête de page. -->
+    <header class="px-4 py-3">
+        <navbar>
+            <div class="collapse bg-pinkORI" id="navbarHeader">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-7 py-4">
+                            <h2 class="text-black">À propos</h2>
+                            <p class="orangeORI"><em>Orinoco est un site e-commerce de vente de produits en ligne</em>.
+                            </p>
+                        </div>
+                        <div class="col-sm-4 offset-md-1 py-4">
+                            <h2 class="text-black">Liens</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="index.html" class="purpleORI disable-link"><em>Accueil</em></a></li>
+                                <li><a href="page-panier.html" class="purpleORI disable-link"><em>Votre panier</em></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar navbar-dark bg-pinkORI box-shadow">
+                <div class="container d-flex justify-content-between">
+                    <a href="#" class="navbar-brand d-flex align-items-center">
+                        <a class="navbar-brand" href="#">
+                            <img class="ms-3" src="img/logo-orinoco.jpg" title="titre du site e-commerce"
+                                alt="vente internationale, meilleurs achats, site web, proposition de produits" />
+                        </a>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+                        aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </navbar>
+    </header>
+
+    
+    <!-- Bas de page. -->
+    <footer class="mt-5">
+        <div class="container py-4 px-5 bg-pinkORI">
+            <span class="orangeORI ms-2"><em><a href="mailto:mag@orinoco.fr"
+                        class="purpleORI disable-link">mag@orinoco.fr</a> -- Mentions légales -- Livraisons et retours
+                    -- Aides et informations</em></span>
+        </div>
+    </footer>
+
+    <!-- Ajout de Babel pour transpiler le code JS (adaptations plus anciennes) : -->
+    <script src="/polyfill.bundle.js"></script>
+    <!-- Appel du package bundle.js (minifiy, package, sépare en fichiers, accès à des bibliothèques) : -->
+    <script src="/app.bundle.js"></script>
+    <!-- Ce chemin permet l'utilisation d'un serveur "localhost" avec "npm start" testant notre code et rechargeant automatiquement le navigateur après modification -->
+
+    <!-- Liens bootstrap pour JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <!-- Ajout des fichiers JS par leur source -->
+    <script src="./app.js"></script>
+    <script src="./src/index.js"></script>
+    <script src="./src/query.js"></script>
+    <script src="./server.js"></script>
+
+    <script src="./controllers/camera.js"></script>
+    <script src="./controllers/furniture.js"></script>
+    <script src="./controllers/teddy.js"></script>
+
+    <script src="./models/Camera.js"></script>
+    <script src="./models/Furniture.js"></script>
+    <script src="./models/Teddy.js"></script>
+
+    <script src="./routes/"></script>
+    <script src="./routes/"></script>
+    <script src="./routes/"></script>
+</body>
+
+</html>

@@ -11,6 +11,10 @@
     background-color: #5100ff;
 }
 
+.pinkORI {
+    background-color: rgb(242, 234, 240);
+}
+
 .purpleORI {
     color: #5100ff;
 }
@@ -19,7 +23,7 @@
     color: #fd7e14;
 }
 
-// Autres propriétés :
+// Autres ajouts de propriétés variées :
 .disable-link {
     text-decoration: none;
 }
@@ -42,4 +46,12 @@ header div.navbar.navbar-dark div.container button.navbar-toggler {
 main section div.container button:hover {
     transition: 250ms ease-in;
     transform: scale(1.05);
+}
+
+.new-width {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
 }

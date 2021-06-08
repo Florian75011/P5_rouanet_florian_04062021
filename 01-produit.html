@@ -19,43 +19,48 @@
 <!-- Une page “produit”, qui affiche de manière dynamique l'élément sélectionné par l'utilisateur et lui permet de personnaliser le produit et de l'ajouter à son panier ; -->
 
 <body>
-    <!-- En tête de page. -->
+    <!-- En tête de page avec sa navbar dépliante -->
     <header class="px-4 py-3">
-        <navbar>
-            <div class="collapse bg-pinkORI" id="navbarHeader">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-8 col-md-7 py-4">
-                            <h2 class="text-black">À propos</h2>
-                            <p class="orangeORI"><em>Orinoco est un site e-commerce de vente de produits en ligne</em>.
-                            </p>
-                        </div>
-                        <div class="col-sm-4 offset-md-1 py-4">
-                            <h2 class="text-black">Liens</h2>
-                            <ul class="list-unstyled">
-                                <li><a href="index.html" class="purpleORI disable-link"><em>Accueil</em></a></li>
-                                <li><a href="02-panier.html" class="purpleORI disable-link"><em>Votre panier</em></a>
-                                </li>
-                            </ul>
+        <div class="new-width">
+            <navbar>
+                <div class="collapse bg-pinkORI" id="navbarHeader">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-8 col-md-7 py-4">
+                                <h2 class="text-black">À propos</h2>
+                                <p class="orangeORI"><em>Orinoco est un site e-commerce de vente de produits en
+                                        ligne</em>.
+                                </p>
+                            </div>
+                            <div class="col-sm-4 offset-md-1 py-4">
+                                <h2 class="text-black">Liens</h2>
+                                <ul class="list-unstyled">
+                                    <li><a href="index.html" class="purpleORI disable-link"><em>Accueil</em></a></li>
+                                    <li><a href="02-panier.html" class="purpleORI disable-link"><em>Votre
+                                                panier</em></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="navbar navbar-dark bg-pinkORI box-shadow">
-                <div class="container d-flex justify-content-between">
-                    <a href="#" class="navbar-brand d-flex align-items-center">
-                        <a class="navbar-brand" href="index.html">
-                            <img class="ms-3" src="images/logo-orinoco.jpg" title="titre du site e-commerce"
-                                alt="vente internationale, meilleurs achats, site web, proposition de produits" />
+                <div class="navbar navbar-dark bg-pinkORI box-shadow">
+                    <div class="container d-flex justify-content-between">
+                        <a href="#" class="navbar-brand d-flex align-items-center">
+                            <a class="navbar-brand" href="index.html">
+                                <img class="ms-3" src="images/logo-orinoco.jpg" href="index.html"
+                                    title="titre du site e-commerce"
+                                    alt="vente internationale, meilleurs achats, site web, proposition de produits" />
+                            </a>
                         </a>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
-                        aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+                            aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </navbar>
+            </navbar>
+        </div>
     </header>
 
     <!-- Affichage du produit unique -->
@@ -64,18 +69,26 @@
         <div class="container-fluid">
             <div class="col-12">
                 <div class="card shadow-sm">
-                    <img src="${camera.imageUrl}" class="bd-placeholder-img card-img-top" width="100%" height="225"
-                        alt="vente en ligne, caméra vintage" xmlns="http://www.w3.org/2000/svg" role="img"
+                    <img src="${camera.imageUrl}" class="bd-placeholder-img card-img-top" id="imageProduct" width="100%"
+                        height="225" alt="vente en ligne, caméra vintage" xmlns="http://www.w3.org/2000/svg" role="img"
                         aria-label="Placeholder: Caméras" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
                         dy=".3em"></text>
                     </img>
 
                     <div class="card-body">
-                        <h3 class="display-6 text-center">${camera.name}</h3>
-                        <h4 class="text-center">${camera.price}€</h4>
-                        <p class="card-text">${camera.description}</p>
+                        <h3 class="display-6 text-center pinkORI" id="nameProduct">${camera.name}</h3>
+                        <h4 class="text-center pinkORI" id="priceProduct">${camera.price}€</h4>
+                        <p class="card-text pinkORI" id="descriptionProduct">${camera.description}</p>
                         <div class="d-flex justify-content-between align-items-center">
+                        </div>
+
+                        <div class="btn-group">
+                            <a href="">
+                                <button type="button" id="my-cart"
+                                    class="btn btn-lg btn-outline-secondary btn-outline-ORI">Ajouter au panier
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -83,7 +96,7 @@
         </div>
     </main>
 
-    <!-- Bas de page. -->
+    <!-- Bas de page informatif -->
     <footer class="mt-5">
         <div class="container py-4 px-5 bg-pinkORI">
             <span class="orangeORI ms-2"><em><a href="mailto:mag@orinoco.fr"
@@ -98,6 +111,9 @@
     <script src="/app.bundle.js"></script>
     <!-- Ce chemin permet l'utilisation d'un serveur "localhost" avec "npm start" testant notre code et rechargeant automatiquement le navigateur après modification -->
 
+    <!-- Ajout des fichiers JS par leur source -->
+    <script src="./src/product.js"></script>
+
     <!-- Liens bootstrap pour JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -108,9 +124,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-
-    <!-- Ajout des fichiers JS par leur source -->
-    <script src="./src/product.js"></script>
 </body>
 
 </html>

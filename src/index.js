@@ -1,21 +1,5 @@
-// // Méthode d'appel JS moderne de 2018 et ajout de la librairie query.js :
-// import retrieveContent from './query.js';
-
-// async function showContent() {
-//   try {
-//     const content = await retrieveContent();
-
-//     let elt = document.createElement('div');
-//     elt.innerHTML = content.join('<br />');
-
-//     document.getElementsByTagName('body')[0].appendChild(elt);
-//   } catch (e) {
-//     console.log('Error', e);
-//   }
-// }
-
-// showContent();
-
+// Function d'appel fetch pour récupérer les données du serveur API des caméras, on fait une boucle sur chacune d'elles,
+// puis on créé un element HTML pour chaque camera qu'on insere dans le DOM :
 $(document).ready(function() {
   fetch('http://localhost:3000/api/cameras').then(function(response) {
     response.json().then(function(data) {
@@ -52,3 +36,21 @@ $(document).ready(function() {
     });
   });
 });
+
+// // Méthode d'appel JS moderne de 2018 et ajout de la librairie query.js :
+// import retrieveContent from './query.js';
+
+// async function showContent() {
+//   try {
+//     const content = await retrieveContent();
+
+//     let elt = document.createElement('div');
+//     elt.innerHTML = content.join('<br />');
+
+//     document.getElementsByTagName('body')[0].appendChild(elt);
+//   } catch (e) {
+//     console.log('Error', e);
+//   }
+// }
+
+// showContent();

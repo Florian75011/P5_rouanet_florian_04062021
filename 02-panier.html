@@ -19,51 +19,58 @@
 <!-- Une page “panier” contenant un résumé des produits dans le panier, le prix total et un formulaire permettant de passer une commande. Les données du formulaire doivent être correctes et bien formatées avant d'être renvoyées au back-end. Par exemple, pas de texte dans les champs date ; -->
 
 <body>
-  <!-- En tête de page. -->
+  <!-- En tête de page avec sa navbar dépliante -->
   <header class="px-4 py-3">
-    <navbar>
-      <div class="collapse bg-pinkORI" id="navbarHeader">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <h2 class="text-black">À propos</h2>
-              <p class="orangeORI"><em>Orinoco est un site e-commerce de vente de produits en ligne</em>.
-              </p>
-            </div>
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h2 class="text-black">Liens</h2>
-              <ul class="list-unstyled">
-                <li><a href="index.html" class="purpleORI disable-link"><em>Accueil</em></a></li>
-                <li><a href="02-panier.html" class="purpleORI disable-link"><em>Votre panier</em></a>
-                </li>
-              </ul>
+    <div class="new-width">
+      <navbar>
+        <div class="collapse bg-pinkORI" id="navbarHeader">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-md-7 py-4">
+                <h2 class="text-black">À propos</h2>
+                <p class="orangeORI"><em>Orinoco est un site e-commerce de vente de produits en
+                    ligne</em>.
+                </p>
+              </div>
+              <div class="col-sm-4 offset-md-1 py-4">
+                <h2 class="text-black">Liens</h2>
+                <ul class="list-unstyled">
+                  <li><a href="index.html" class="purpleORI disable-link"><em>Accueil</em></a></li>
+                  <li><a href="02-panier.html" class="purpleORI disable-link"><em>Votre
+                        panier</em></a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="navbar navbar-dark bg-pinkORI box-shadow">
-        <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
-            <a class="navbar-brand" href="index.html">
-              <img class="ms-3" src="images/logo-orinoco.jpg" title="titre du site e-commerce"
-                alt="vente internationale, meilleurs achats, site web, proposition de produits" />
+        <div class="navbar navbar-dark bg-pinkORI box-shadow">
+          <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+              <a class="navbar-brand" href="index.html">
+                <img class="ms-3" src="images/logo-orinoco.jpg" href="index.html" title="titre du site e-commerce"
+                  alt="vente internationale, meilleurs achats, site web, proposition de produits" />
+              </a>
             </a>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
-            aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+              aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
         </div>
-      </div>
-    </navbar>
+      </navbar>
+    </div>
   </header>
 
   <main>
-  <section>
-      <section class="container p-4 bg-pinkORI mb-4" style="padding: 1rem; box-sizing: border-box; border-width: 0; border-style: solid; border-color: #e5e7eb;">
+    <!-- Ajout du panier de paiement par carte -->
+    <section>
+      <section class="container p-4 bg-pinkORI mb-4"
+        style="padding: 1rem; box-sizing: border-box; border-width: 0; border-style: solid; border-color: #e5e7eb;">
         <h2 class="text-lg font-bold mb-3">Panier et carte pour procéder au paiement :</h2>
 
-        <table class="border-collapse w-full" style="width: 100%; text-indent: 0; border-color: inherit; box-sizing: border-box; border-width: 0; border-style: solid;">
+        <table class="border-collapse w-full"
+          style="width: 100%; text-indent: 0; border-color: inherit; box-sizing: border-box; border-width: 0; border-style: solid;">
           <thead>
             <tr class="border bg-white">
               <th class="py-2">Produit</th>
@@ -101,91 +108,90 @@
           </tbody>
         </table>
       </section>
-      
-  </section>
 
-    <section>
-    <div class="container bg-pinkORI mt-4 p-4">
-      <h2>Formulaire pour passer commande :</h2>
-      <form class="needs-validation" novalidate>
-        <div class="form-row">
-          <div class="col-md-4 mb-3">
-            <label for="prenom">Prénom</label>
-            <input type="text" class="form-control" id="prenom" placeholder="Pierre" required>
-            <div class="valid-feedback">Okay !</div>
-            <div class="invalid-feedback">Valeur incorrecte</div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <label for="nom">Nom de famille</label>
-            <input type="text" class="form-control" id="nom" placeholder="Giraud" required>
-            <div class="valid-feedback">Okay !</div>
-            <div class="invalid-feedback">Valeur incorrecte</div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <label for="pseudo">Pseudonyme</label>
-            <input type="text" class="form-control" id="pseudo" placeholder="PierreGird" required>
-            <div class="valid-feedback">Okay !</div>
-            <div class="invalid-feedback">Valeur incorrecte</div>
-          </div>
+      <!-- Ajout du formulaire permettant de procéder au paiement -->
+      <section>
+        <div class="container bg-pinkORI mt-4 p-4">
+          <h2>Formulaire pour passer commande :</h2>
+          <form class="needs-validation" novalidate>
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="prenom">Prénom</label>
+                <input type="text" class="form-control" id="prenom" placeholder="Pierre" required>
+                <div class="valid-feedback">Okay !</div>
+                <div class="invalid-feedback">Valeur incorrecte</div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="nom">Nom de famille</label>
+                <input type="text" class="form-control" id="nom" placeholder="Giraud" required>
+                <div class="valid-feedback">Okay !</div>
+                <div class="invalid-feedback">Valeur incorrecte</div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="pseudo">Pseudonyme</label>
+                <input type="text" class="form-control" id="pseudo" placeholder="PierreGird" required>
+                <div class="valid-feedback">Okay !</div>
+                <div class="invalid-feedback">Valeur incorrecte</div>
+              </div>
+            </div>
+            <div class="form-group col-md-4 mb-3">
+              <label for="email">Entrez votre mail</label>
+              <input type="email" class="form-control" id="email" placeholder="pierre.giraud@edhec.com">
+            </div>
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="ville">Ville</label>
+                <input type="text" class="form-control" id="ville" placeholder="Ville" required>
+                <div class="valid-feedback">Okay !</div>
+                <div class="invalid-feedback">Valeur incorrecte</div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="pays">Pays</label>
+                <input type="text" class="form-control" id="pays" placeholder="Pays" required>
+                <div class="valid-feedback">Okay !</div>
+                <div class="invalid-feedback">Valeur incorrecte</div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="cp">Code postal</label>
+                <input type="number" class="form-control" id="cp" placeholder="Code postal" required>
+                <div class="valid-feedback">Okay !</div>
+                <div class="invalid-feedback">Valeur incorrecte</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="cgu" required>
+                <label class="form-check-label" for="cgu">J'accepte les conditions générales d'utilisation et de
+                  vente</label>
+                <div class="invalid-feedback">Vous devez accepter les CGU pour continuer</div>
+              </div>
+            </div>
+            <button class="btn bg-purpleORI text-white mt-2 ms-2" type="submit">Envoyer le formulaire au site !</button>
+          </form>
         </div>
-        <div class="form-group col-md-4 mb-3">
-          <label for="email">Entrez votre mail</label>
-          <input type="email" class="form-control" id="email" placeholder="pierre.giraud@edhec.com">
-        </div>
-        <div class="form-row">
-          <div class="col-md-4 mb-3">
-            <label for="ville">Ville</label>
-            <input type="text" class="form-control" id="ville" placeholder="Ville" required>
-            <div class="valid-feedback">Okay !</div>
-            <div class="invalid-feedback">Valeur incorrecte</div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <label for="pays">Pays</label>
-            <input type="text" class="form-control" id="pays" placeholder="Pays" required>
-            <div class="valid-feedback">Okay !</div>
-            <div class="invalid-feedback">Valeur incorrecte</div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <label for="cp">Code postal</label>
-            <input type="number" class="form-control" id="cp" placeholder="Code postal" required>
-            <div class="valid-feedback">Okay !</div>
-            <div class="invalid-feedback">Valeur incorrecte</div>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="cgu" required>
-            <label class="form-check-label" for="cgu">J'accepte les conditions générales d'utilisation et de
-              vente</label>
-            <div class="invalid-feedback">Vous devez accepter les CGU pour continuer</div>
-          </div>
-        </div>
-        <button class="btn bg-purpleORI text-white mt-2 ms-2" type="submit">Envoyer le formulaire au site !</button>
-      </form>
-    </div>
-    <script>
-      /*La fonction principale de ce script est d'empêcher l'envoi du formulaire si un champ a été mal rempli et d'appliquer les styles de validation aux différents éléments de formulaire*/
-      (function () {
-        'use strict';
-        window.addEventListener('load', function () {
-          let forms = document.getElementsByClassName('needs-validation');
-          let validation = Array.prototype.filter.call(forms, function (form) {
-            form.addEventListener('submit', function (event) {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-              form.classList.add('was-validated');
+        <script>
+          /*La fonction principale de ce script est d'empêcher l'envoi du formulaire si un champ a été mal rempli et d'appliquer les styles de validation aux différents éléments de formulaire*/
+          (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+              let forms = document.getElementsByClassName('needs-validation');
+              let validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+                }, false);
+              });
             }, false);
-          });
-        }, false);
-      })();
-    </script>
-    </section>
+          })();
+        </script>
+      </section>
 
   </main>
 
-  <!-- Bas de page. -->
+  <!-- Bas de page informatif -->
   <footer class="mt-5">
     <div class="container py-4 px-5 bg-pinkORI">
       <span class="orangeORI ms-2"><em><a href="mailto:mag@orinoco.fr" class="purpleORI disable-link">mag@orinoco.fr</a>
@@ -218,16 +224,8 @@
   <script src="./server.js"></script>
 
   <script src="./controllers/camera.js"></script>
-  <script src="./controllers/furniture.js"></script>
-  <script src="./controllers/teddy.js"></script>
-
   <script src="./models/Camera.js"></script>
-  <script src="./models/Furniture.js"></script>
-  <script src="./models/Teddy.js"></script>
-
-  <script src="./routes/"></script>
-  <script src="./routes/"></script>
-  <script src="./routes/"></script>
+  <script src="./routes/camera.js"></script>
 </body>
 
 </html>

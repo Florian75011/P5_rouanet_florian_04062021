@@ -2,8 +2,13 @@
 @import "variable_overrides";   // fichier des variables
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
+// Ajout des couleurs principales du site par rapport au logo Orinoco :
 .bg-pinkORI {
     background-color: rgb(242, 234, 240);
+}
+
+.bg-purpleORI {
+    background-color: #5100ff;
 }
 
 .purpleORI {
@@ -14,6 +19,7 @@
     color: #fd7e14;
 }
 
+// Autres propriétés :
 .disable-link {
     text-decoration: none;
 }
@@ -31,4 +37,9 @@ header div.navbar.navbar-dark div.container button.navbar-toggler {
 
 .btn-outline-ORI:hover {
     background-color: rgb(242, 234, 240);
+}
+
+main section div.container button:hover {
+    transition: 250ms ease-in;
+    transform: scale(1.05);
 }

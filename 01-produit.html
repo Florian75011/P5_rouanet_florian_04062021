@@ -4,12 +4,13 @@
 <head>
     <title>Orinoco - Site e-commerce, boutique en ligne.</title>
     <!-- L'ensemble des balises metas -->
+    <meta charset='utf-8'>
     <meta name="keywords" content="Orinoco, site e-commerce, achats en ligne, site web, stratégie marketing, France">
     <meta name="description" content="Orinoco est un site e-commerce de vente de produits en ligne.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="index, follow">
     <!-- Les balises de liens -->
-    <link rel="shortcut icon" type="image/png" href="./img/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.png">
     <!-- Lien du fichier CSS compilé via SASS et Bootsrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -33,7 +34,7 @@
                             <h2 class="text-black">Liens</h2>
                             <ul class="list-unstyled">
                                 <li><a href="index.html" class="purpleORI disable-link"><em>Accueil</em></a></li>
-                                <li><a href="page-panier.html" class="purpleORI disable-link"><em>Votre panier</em></a>
+                                <li><a href="02-panier.html" class="purpleORI disable-link"><em>Votre panier</em></a>
                                 </li>
                             </ul>
                         </div>
@@ -44,7 +45,7 @@
                 <div class="container d-flex justify-content-between">
                     <a href="#" class="navbar-brand d-flex align-items-center">
                         <a class="navbar-brand" href="index.html">
-                            <img class="ms-3" src="img/logo-orinoco.jpg" title="titre du site e-commerce"
+                            <img class="ms-3" src="images/logo-orinoco.jpg" title="titre du site e-commerce"
                                 alt="vente internationale, meilleurs achats, site web, proposition de produits" />
                         </a>
                     </a>
@@ -57,6 +58,30 @@
         </navbar>
     </header>
 
+    <!-- Affichage du produit unique -->
+    <main>
+        <div class="py-4"></div>
+        <div class="container-fluid">
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <img src="${camera.imageUrl}" class="bd-placeholder-img card-img-top" width="100%" height="225"
+                        alt="vente en ligne, caméra vintage" xmlns="http://www.w3.org/2000/svg" role="img"
+                        aria-label="Placeholder: Caméras" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                        dy=".3em"></text>
+                    </img>
+
+                    <div class="card-body">
+                        <h3 class="display-6 text-center">${camera.name}</h3>
+                        <h4 class="text-center">${camera.price}€</h4>
+                        <p class="card-text">${camera.description}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <!-- Bas de page. -->
     <footer class="mt-5">
@@ -85,22 +110,7 @@
     </script>
 
     <!-- Ajout des fichiers JS par leur source -->
-    <script src="./app.js"></script>
-    <script src="./src/index.js"></script>
-    <script src="./src/query.js"></script>
-    <script src="./server.js"></script>
-
-    <script src="./controllers/camera.js"></script>
-    <script src="./controllers/furniture.js"></script>
-    <script src="./controllers/teddy.js"></script>
-
-    <script src="./models/Camera.js"></script>
-    <script src="./models/Furniture.js"></script>
-    <script src="./models/Teddy.js"></script>
-
-    <script src="./routes/"></script>
-    <script src="./routes/"></script>
-    <script src="./routes/"></script>
+    <script src="./src/product.js"></script>
 </body>
 
 </html>

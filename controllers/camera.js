@@ -1,3 +1,4 @@
+// Ici se trouvent les fonctions appelées par les "routes"
 const uuid = require('uuid/v1');
 const Camera = require('../models/Camera');
 

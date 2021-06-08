@@ -1,4 +1,4 @@
-// Code cloné chez OpenClassRooms :
+// Ici se trouvent les classes JavaScript qui gèrent les données :
 const cameras = [
   {
     "lenses": [

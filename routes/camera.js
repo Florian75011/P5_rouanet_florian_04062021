@@ -1,4 +1,4 @@
-// Code cloné chez OpenClassRooms :
+// Ici se trouvent des URL qui appellent des fonctions
 const express = require('express');
 const router = express.Router();
 

@@ -30,22 +30,36 @@ $(document).ready(function () {
 // Page de confirmation de commande
 // Call POST sur /order et affichage de l'id de la commande (qui est obtenue en resutlat du call POST sur /order)
 
+/*
+const object1 = { a: 'foo', b: 42, c: {} };
 
-// const object1 = { a: 'foo', b: 42, c: {} };
+const queryString = window.location.search;
+console.log(queryString);
 
-// const queryString = window.location.search;
-// console.log(queryString);
+html = $.parseHTML( str ),
+nodeNames = [];
 
-// html = $.parseHTML( str ),
-// nodeNames = [];
+Append the parsed HTML
+$log.append( html );
 
-// // Append the parsed HTML
-// $log.append( html );
+First camera id "5be1ed3f1c9d44000030b061"
 
-// First camera id "5be1ed3f1c9d44000030b061"
+$("#bfCaptchaEntry").click(function(){ myFunction(); });
 
-// $("#bfCaptchaEntry").click(function(){ myFunction(); });
+itemSelected front-end push.nav sur la page
 
-// camera.lenses
+Le localStorage lieu où le nav/site stock des donnnées et récupèrent le tout en JS
 
-// itemSelected front-end push.nav sur la page
+$('main div.container div.row').append(html);
+Une string interpollation
+
+DOM : onClick let panier = JSON.stringyfy.parse + array vide à remplir
+
+camera.lenses (get.lenses + boucle for - options personnalisées)
+
+Get /:_id - Renvoie l'élément correspondant à identifiant given_id
+
+Caméras vintage : ​http://localhost:3000/api/cameras
+
+Pour déclarer une variable globale en Javascript, il suffit de lui affecter une valeur sans mettre l'instruction var
+*/

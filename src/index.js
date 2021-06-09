@@ -19,7 +19,7 @@ $(document).ready(function() {
                 <p class="card-text">${camera.description}</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a href="product.html?camera_id=${camera._id}">
+                    <a href="01-produit.html?camera_id=${camera._id}">
                       <button type="button" class="btn btn-lg btn-outline-secondary btn-outline-ORI">Découvrir notre
                         caméra
                       </button>

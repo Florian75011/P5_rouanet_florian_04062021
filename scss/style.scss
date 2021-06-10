@@ -24,12 +24,12 @@
 }
 
 // Autres ajouts de propriétés variées :
-.disable-link {
-    text-decoration: none;
-}
-
 header div.navbar.navbar-dark div.container button.navbar-toggler {
     background-color: #5100ff;
+}
+
+.disable-link {
+    text-decoration: none;
 }
 
 .footerORI {
@@ -43,7 +43,18 @@ header div.navbar.navbar-dark div.container button.navbar-toggler {
     background-color: rgb(242, 234, 240);
 }
 
+// Animations en zoom :
 main section div.container button:hover {
+    transition: 250ms ease-in;
+    transform: scale(1.05);
+}
+
+html body main.w-full.bg-oniPink.rounded-lg.my-4.py-16.flex.justify-center.flex-col div.text-center a button:hover {
+    transition: 250ms ease-in;
+    transform: scale(1.05);
+}
+
+html body main div.container-fluid div#camera.col-12 div.card.shadow-sm rect div.card-body div.btn-group button:active {
     transition: 250ms ease-in;
     transform: scale(1.05);
 }

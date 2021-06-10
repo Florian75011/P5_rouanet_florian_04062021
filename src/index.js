@@ -1,8 +1,9 @@
-// Function d'appel fetch pour récupérer les données du serveur API des caméras, on fait une boucle sur chacune d'elles,
-// puis on créé un element HTML pour chaque camera qu'on insere dans le DOM :
-$(document).ready(function() {
+document.addEventListener("DOMContentLoaded", function() {
+// $(document).ready(function() {
   fetch('http://localhost:3000/api/cameras').then(function(response) {
     response.json().then(function(data) {
+      const camerasContainer = document.getElementById('cameras_container');
+
       for (const camera of data) {
         let html = `
           <div class="col">
@@ -19,7 +20,7 @@ $(document).ready(function() {
                 <p class="card-text">${camera.description}</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <a href="01-produit.html?camera_id=${camera._id}">
+                    <a href="product.html?camera_id=${camera._id}">
                       <button type="button" class="btn btn-lg btn-outline-secondary btn-outline-ORI">Découvrir notre
                         caméra
                       </button>
@@ -30,8 +31,8 @@ $(document).ready(function() {
             </div>
           </div>
         `;
-
-        $(html).appendTo('main div.container div.row');
+        // $(html).appendTo('main div.container div.row');
+        camerasContainer.innerHTML += html
       }
     });
   });

@@ -1,7 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
-// $(document).ready(function() {
-  fetch('http://localhost:3000/api/cameras').then(function(response) {
-    response.json().then(function(data) {
+// On écoute un évènement et lance une fonciton
+document.addEventListener("DOMContentLoaded", function () {
+  // $(document).ready(function() {
+  fetch('http://localhost:3000/api/cameras').then(function (response) {
+    response.json().then(function (data) {
       const camerasContainer = document.getElementById('cameras_container');
 
       for (const camera of data) {

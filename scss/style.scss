@@ -1,5 +1,4 @@
-// Import - Pour remplacer les variables de Bootstrap, vous devez importer le ou les fichiers pertinents du répertoire :
-@import "variable_overrides";   // fichier des variables
+// Importation des fichiers nécessaires pour compiler le fichier SCSS et CSS et avoir la possibilité de remplacer les variables de Bootstrap :
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 // Ajout des couleurs principales du site par rapport au logo Orinoco :
@@ -23,13 +22,35 @@
     color: #fd7e14;
 }
 
-// Autres ajouts de propriétés variées :
-header div.navbar.navbar-dark div.container button.navbar-toggler {
-    background-color: #5100ff;
+// Animations en zoom :
+body main section div.container button:hover {
+    transition: 250ms ease-in;
+    transform: scale(1.05);
 }
 
-.disable-link {
-    text-decoration: none;
+body main.w-full.bg-oniPink a button:hover {
+    transition: 250ms ease-in;
+    transform: scale(1.05);
+}
+
+body main div.container-fluid div#camera.col-12 div.card.shadow-sm button:active {
+    transition: 150ms ease-in;
+    transform: scale(1.05);
+}
+
+// Alignement et taille du layout (header, footer) :
+body header div.new-width navbar div#navbarHeader div.container div.row p.orangeORI em {
+    font-size: 24px;
+    width: 390px;
+    display: inline-block;
+}
+
+.new-width {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footerORI {
@@ -39,30 +60,15 @@ header div.navbar.navbar-dark div.container button.navbar-toggler {
     background-color: rgb(242, 234, 240);
 }
 
+// Autres ajouts de propriétés variées :
+header div.navbar.navbar-dark div.container button.navbar-toggler {
+    background-color: #5100ff;
+}
+
+.disable-link {
+    text-decoration: none;
+}
+
 .btn-outline-ORI:hover {
     background-color: rgb(242, 234, 240);
-}
-
-// Animations en zoom :
-main section div.container button:hover {
-    transition: 250ms ease-in;
-    transform: scale(1.05);
-}
-
-html body main.w-full.bg-oniPink.rounded-lg.my-4.py-16.flex.justify-center.flex-col div.text-center a button:hover {
-    transition: 250ms ease-in;
-    transform: scale(1.05);
-}
-
-html body main div.container-fluid div#camera.col-12 div.card.shadow-sm rect div.card-body div.btn-group button:active {
-    transition: 250ms ease-in;
-    transform: scale(1.05);
-}
-
-.new-width {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
 }

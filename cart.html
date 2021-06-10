@@ -85,7 +85,7 @@
     <section>
       <section class="container p-4 bg-pinkORI mb-4"
         style="padding: 1rem; box-sizing: border-box; border-width: 0; border-style: solid; border-color: #e5e7eb;">
-        <h2 class="text-lg font-bold mb-3">Panier et carte pour procéder au paiement :</h2>
+        <h2 class="text-lg font-bold mb-3">Panier des produits à régler :</h2>
 
         <table class="border-collapse w-full"
           style="width: 100%; text-indent: 0; border-color: inherit; box-sizing: border-box; border-width: 0; border-style: solid;">
@@ -98,10 +98,7 @@
           </thead>
 
           <tbody id="cart-container" style="background-color: lightgray;">
-            <!-- <tr class="bg-gray-100">
-              <td colspan="3" class="text-center py-2">Total</td>
-              <td class="text-center" id="">X€</td>
-            </tr> -->
+            <!-- Gestion JS des tableaux de produits ajoutés au panier -->
           </tbody>
         </table>
       </section>
@@ -164,7 +161,9 @@
                 <div class="invalid-feedback">Vous devez accepter les CGU pour continuer</div>
               </div>
             </div>
-            <button class="btn bg-purpleORI text-white mt-2 ms-2" type="submit">Envoyer le formulaire au site !</button>
+            <a href="confirmation.html"><button class="btn bg-purpleORI text-white mt-2 ms-2" type="submit">
+                Envoyer le formulaire au site !
+              </button></a>
           </form>
         </div>
         <script>
@@ -186,7 +185,6 @@
           })();
         </script>
       </section>
-
   </main>
 
   <!-- Bas de page informatif -->

@@ -1,4 +1,4 @@
-// Ici se trouvent des URL qui appellent des fonctions
+// Ici se trouvent des morceaux d'URL qui appellent des fonctions pour ajouter les chemins
 const express = require('express');
 const router = express.Router();
 

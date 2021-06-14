@@ -1,4 +1,4 @@
-// Ici se trouvent les classes JavaScript qui gèrent les données :
+// Ici se trouvent les classes JavaScript qui gèrent les données avec des classes en général :
 const cameras = [
   {
     "lenses": [

@@ -1,11 +1,15 @@
-// Récupération des informations de la camera sur laquelle on a cliqué et qui s'affiche en page produit ;
-// Possibilité d'ajout des élements (caméras) dans le panier par leurs ID respectives
+// Récupération des informations de la camera sur laquelle on a cliqué et qui s'affiche en page produit + Possibilité d'ajout des élements (caméras) dans le panier par leurs ID respectives
 
+// Ajout d'un évènement à écouter qui prend en paramètre DOMcontentLoaded + une fonction
+// La constante contient une nouvelle recherche instanciée de paramètres d'URL qui localisent/recherchent puis récupèrent l'ID de la caméra
 document.addEventListener("DOMContentLoaded", function () {
     const cameraId = new URLSearchParams(window.location.search).get('camera_id');
 
+    // On se branche sur l'adresse de l'API avec fetch (qui cible chaque donnée à afficher)
     fetch(`http://localhost:3000/api/cameras/${cameraId}`).then(function (response) {
+            // Transforme la variable response au format JSON, on branche dessus une autre fonction prenant en paramètre camera
         response.json().then(function(camera) {
+            // Dans la variable html on place le font-end que l'on veut afficher avec interpollations pour lier les données concernées de chaque caméra
             let html = `
                 <div class="col-12" id="camera" data-id="${camera._id}" data-name="${camera.name}" data-price="${camera.price}" data-image-url="${camera.imageUrl}">
                     <div class="card shadow-sm">
@@ -34,21 +38,21 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>
                     </div>
                 </div>`;
+                // Autre méthode de récupération de code HTML + incusion dans la variable html de cette traduction de code via .innerHTML
             document.querySelector('main div.container-fluid').innerHTML += html;
 
+            // On récupère l'élement par l'ID qui se branche sur document, auquel on ajoute un évènement à écouter prenant en paramètre le clique utilisateur et une fonction
             document.getElementById("my-cart").addEventListener('click', function() {
+                // On met dans la constante le document qui contient la caméra récupérée par l'ID (+ chaque donnée de la caméra)
+                // Dans la variable panier on transforme le JSON en récupérant l'Item my-cart dans le localStorage (on stocke localement)
+                // Soit le panier contient la variable d'avant (produits caméras), soit il est un tableau vide + possibilité d'ajout
                 const productData = document.getElementById('camera').dataset;
                 let panier = JSON.parse(localStorage.getItem('my-cart'));
                 panier = panier || [];
                 panier.push(productData);
+                // Le localStorage prend la fonction setItem servant à afficher l'Item, stringify convertit le panier en string JSON
                 localStorage.setItem('my-cart', JSON.stringify(panier));
             });
         });
     });
 });
-
-// Rendre actif le formulaire
-// Gérer la page confirmation
-
-// Call POST sur /order et affichage de l'id de la commande (qui est obtenue en resutlat du call POST sur /order)
-// Bonus : ajouter la possibilité de supprimer un element du panier

@@ -1,4 +1,4 @@
-// Constante de connexion qui permet de se connecter aux APIs.
+// Constante de connexion qui permet de se connecter aux APIs via le http et l'application + adresse du serveur.
 // Code cloné chez OpenClassRooms :
 const http = require('http');
 const app = require('./app');

@@ -1,4 +1,4 @@
-// Code cloné chez OpenClassRooms :
+// Code cloné construisant l'API d'avance (avec HTTP et routes JS) :
 const express = require('express');
 const path = require('path');
 

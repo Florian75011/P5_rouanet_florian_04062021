@@ -1,5 +1,5 @@
-// Fonction écoute d'évènement, définition du prix à 0, soit panier est rempli soit c'est tableaux vide, container panier dans le <t body> :
-document.addEventListener("DOMContentLoaded", function() {
+// Fonction écoute d'évènement, définition du prix à 0, soit panier est rempli soit c'est un tableau vide en objet JS, container panier dans le <t body> :
+document.addEventListener("DOMContentLoaded", function () {
     let totalPrice = 0;
     const panier = JSON.parse(localStorage.getItem('my-cart')) || [];
     const cartContainer = document.getElementById('cart-container');
@@ -30,3 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Gestion du formulaire
+// Gérer la page confirmation
+
+// Call POST sur /order et affichage de l'id de la commande (qui est obtenue en resutlat du call POST sur /order)
+// Bonus : ajouter la possibilité de supprimer un element du panier

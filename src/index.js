@@ -1,13 +1,13 @@
-// Ajout au document d'un évènement à écouter, on se branche sur l'adresse de l'API avec fetch (cible chaque donnée à afficher),
+// Ajout d'un eventListener sur le document qui est trigger quand la page a fini de charger puis requete GET sur l'API
 document.addEventListener("DOMContentLoaded", function () {
   fetch('http://localhost:3000/api/cameras').then(function (response) {
-    // Transforme la variable response au format JSON, on branche dessus une fonction prenant en paramètre data=données, et qui s'exécute à la ligne suivante
-    // La constante cameraContainer récupère l'ID ciblée des caméras par la fonction document.get...
+    // En cas de succes de la requete a l'API on parse la reponse en JSON
+    // On stock l'element html qui va nous servir a contenir le html des cameras dans une variable camerasContainer
     response.json().then(function (data) {
       const camerasContainer = document.getElementById('cameras_container');
 
-      // La boucle prend en paramètre une constante contenant les données de la caméra
-      // Dans la variable html on place le font-end que l'on veut afficher avec interpollations pour lier les données de chaque caméra
+      // On boucle sur l'objet qui correspond à la reponse JSON de l'API pour passer sur chaque cameras que l'API nous a retourner
+      // Pour chacune des cameras on génère du html qu'on vient ensuite insérer les uns à la suite des autres dans le container
       for (const camera of data) {
         let html = `
           <div class="col">
@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
         `;
 
-        // Dans la variable html on inclut la variable camerasContainer ajoutée au document HTML
         camerasContainer.innerHTML += html
       }
     });
@@ -61,5 +60,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // showContent();
 
-  // $(document).ready(function() {
-  // $(html).appendTo('main div.container div.row');
+// $(document).ready(function() {
+// $(html).appendTo('main div.container div.row');

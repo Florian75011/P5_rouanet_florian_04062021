@@ -111,43 +111,38 @@
             <div class="form-row">
               <div class="col-md-4 mb-3">
                 <label for="prenom">Prénom</label>
-                <input type="text" class="form-control" id="prenom" onblur="checkprenom()" name="prenom" placeholder="Pierre" required>
+                <input onkeypress="return /[^0-9]+/.test(event.key)" type="text" class="form-control" id="prenom" onblur="checkprenom()" name="prenom" placeholder="Pierre" required>
                 <div class="valid-feedback">Okay !</div>
                 <div class="invalid-feedback">Valeur incorrecte</div>
               </div>
               <div class="col-md-4 mb-3">
                 <label for="nom">Nom de famille</label>
-                <input type="text" class="form-control" id="nom" name="nom" placeholder="Giraud" required>
+                <input onkeypress="return /[^0-9]+/.test(event.key)" type="text" class="form-control" id="nom" name="nom" placeholder="Giraud" required>
                 <div class="valid-feedback">Okay !</div>
                 <div class="invalid-feedback">Valeur incorrecte</div>
               </div>
-              <div class="col-md-4 mb-3">
-                <label for="pseudo">Pseudonyme</label>
-                <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="PierreGird" required>
-                <div class="valid-feedback">Okay !</div>
-                <div class="invalid-feedback">Valeur incorrecte</div>
-              </div>
-            </div>
             <div class="form-group col-md-4 mb-3">
               <label for="email">Entrez votre mail</label>
               <input type="email" class="form-control" id="email" name="email" placeholder="pierre.giraud@edhec.com" required>
+              <div class="valid-feedback">Okay !</div>
+              <div class="invalid-feedback">Valeur incorrecte</div>
             </div>
             <div class="form-row">
               <div class="col-md-4 mb-3">
                 <label for="ville">Ville</label>
-                <input type="text" class="form-control" id="ville" name="ville" placeholder="Ville" required>
+                <input onkeypress="return /[^0-9]+/.test(event.key)" type="text" class="form-control" id="ville" name="ville" placeholder="Ville" required>
                 <div class="valid-feedback">Okay !</div>
                 <div class="invalid-feedback">Valeur incorrecte</div>
               </div>
               <div class="col-md-4 mb-3">
                 <label for="pays">Pays</label>
-                <input type="text" class="form-control" id="pays" name="pays" placeholder="Pays" required>
+                <input onkeypress="return /[^0-9]+/.test(event.key)" type="text" class="form-control" id="pays" name="pays" placeholder="Pays" required>
                 <div class="valid-feedback">Okay !</div>
                 <div class="invalid-feedback">Valeur incorrecte</div>
               </div>
               <div class="col-md-4 mb-3">
                 <label for="cp">Code postal</label>
-                <input type="number" class="form-control" id="cp" name="cp" min="0" placeholder="Code postal" required>
+                <input onkeypress="return /[0-9]+/.test(event.key)" type="text" class="form-control" id="cp" name="cp" placeholder="Code postal" required>
                 <div class="valid-feedback">Okay !</div>
                 <div class="invalid-feedback">Valeur incorrecte</div>
               </div>

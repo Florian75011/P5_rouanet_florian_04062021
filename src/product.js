@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="col-12" id="camera" data-id="${camera._id}" data-name="${camera.name}" data-price="${camera.price}" data-image-url="${camera.imageUrl}">
                     <div class="card shadow-sm">
                         <img src="${camera.imageUrl}" class="bd-placeholder-img card-img-top" id="imageProduct" width="100%"
-                            height="555px" alt="vente en ligne, caméra vintage" xmlns="http://www.w3.org/2000/svg" role="img"
+                            height="655px" alt="vente en ligne, caméra vintage" xmlns="http://www.w3.org/2000/svg" role="img"
                             aria-label="Placeholder: Caméras" preserveAspectRatio="xMidYMid slice" focusable="false">
                         <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
                             dy=".3em"></text>
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // On recupère l'id de la caméra sur laquelle on a cliqué dans les paramètres de l'URL de la page actuelle
             document.querySelector('main div.container-fluid').innerHTML += html;
 
-            // On récupère l'élement par l'ID qui se branche sur document, auquel on ajoute un évènement à écouter prenant en paramètre le clique utilisateur et une fonction
+            // On ajoute un eventListener sur l'element qui a pour id "my-cart" qui sera trigger au clique sur cet élément
             document.getElementById("my-cart").addEventListener('click', function () {
                 // On crée une variable productData dans laquelle on vient stocker un objet qui représente les informations de la caméra (qui sont recupérer dans le HTML) à ajouter dans le panier
                 // On va ensuite récupérer le panier courant qui est stocké dans le localStorage à la clé "my-cart", qu'on va ensuite transformer en objet JS (grâce à JSON.parse) et que l'on stocke dans la variable panier (qui sera égale à un tableau vide dans le cas où le localStorage ne contient rien dans la clé "my-cart")

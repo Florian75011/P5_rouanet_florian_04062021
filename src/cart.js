@@ -27,15 +27,22 @@ document.addEventListener("DOMContentLoaded", function () {
         </tr>
     `;
     cartContainer.innerHTML += priceHtml;
+    // localStorage.setItem('totalPrice', JSON.stringify(totalPrice));
 });
 
 // Gestion du formulaire, contrôle des données
+
 function validationForm() {
+    var is_valid = document.getElementsByClassName('form-control').length === document.getElementsByClassName('valid-feedback').length;
+    // console.log(is_valid);
+    
+    console.log(document.getElementsByClassName('valid-feedback'));
+    console.log(document.getElementsByClassName('form-control'));
+
     prenom = document.getElementById('prenom').value;
     nom = document.getElementById('nom').value;
-    pseudo = document.getElementById('pseudo').value;
 
-    if (prenom == "" || nom == "" || pseudo == "") {
+    if (prenom == "" || nom == "") {
         return false;
     } else if (!isNaN(prenom) || !isNaN(nom)) {
     alert('Votre prénom ou votre nom ne doit pas contenir des caractères numériques numeriques');
@@ -43,27 +50,16 @@ function validationForm() {
     }
     else {
         return true;
-        // window.open("confirmation.html?prenom=" + prenom + "&nom=" + nom, '_parent');
     }
-    // return true;
   }
 
   function checkprenom() {
-//     prenom = document.getElementById('prenom').value;
-    
-//  if (!isNaN(prenom) ) {
-//     alert('Votre prénom doit etre non numeriques');
-//     }
+
     var prenom=document.getElementById('prenom').value;
     if( !isNaN(prenom)){
         document.getElementById('prenom').style.borderColor = "red";
-        // document.getElementById("erreurprenom").style.display = "block";
-        // return false;
     }else{
         document.getElementById('prenom').style.borderColor = "green";
     }
   }
-// Gérer la page confirmation
-
-// Call POST sur /order et affichage de l'id de la commande (qui est obtenue en resutlat du call POST sur /order)
-// Bonus : ajouter la possibilité de supprimer un element du panier
+  

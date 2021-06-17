@@ -19,17 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
                         <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
                             dy=".3em"></text>
                         </img>
-
                         <div class="card-body">
                             <h3 class="display-6 text-center pinkORI" id="nameProduct">${camera.name}</h3>
                             <h4 class="text-center" id="priceProduct">${camera.price}€</h4>
                             <p class="card-text text-center" id="descriptionProduct">${camera.description}</p>
-
                             <label for="lenses-select">Choisissez une lentille:</label>
                             <select name="lenses" id="lenses-select">
                                 ${camera.lenses.map(lense => `<option value="${lense}">${lense}</option>`)}
                             </select><br>
-
                             <div class="btn-group">
                                 <button type="button" id="my-cart" class="btn btn-lg btn-outline-secondary btn-outline-ORI mt-4 align-middle">
                                     Ajouter au panier

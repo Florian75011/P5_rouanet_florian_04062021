@@ -41,44 +41,51 @@
     <!-- En tête de page avec sa navbar dépliante -->
     <header class="px-4 py-3">
         <div class="new-width">
-            <navbar>
-                <div class="collapse bg-pinkORI" id="navbarHeader">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-8 col-md-7 py-4">
-                                <h2 class="text-black">À propos</h2>
-                                <p class="orangeORI"><em>Orinoco est un site e-commerce de vente de produits en
-                                        ligne</em>.
-                                </p>
-                            </div>
-                            <div class="col-sm-4 offset-md-1 py-4">
-                                <h2 class="text-black">Liens</h2>
-                                <ul class="list-unstyled">
-                                    <li><a href="index.html" class="purpleORI disable-link"><em>Accueil</em></a></li>
-                                    <li><a href="cart.html" class="purpleORI disable-link"><em>Votre
-                                                panier</em></a>
-                                    </li>
-                                </ul>
-                            </div>
+            <div class="collapse bg-pinkORI" id="navbarHeader">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-7 py-4">
+                            <h2 class="text-black">À propos</h2>
+                            <p class="orangeORI"><em>Orinoco est un site e-commerce de vente de produits en
+                                    ligne</em>.
+                            </p>
+                        </div>
+                        <div class="col-sm-4 offset-md-1 py-4">
+                            <h2 class="text-black">Liens</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="index.html" class="purpleORI disable-link"
+                                        style="font-size: 1.5rem;"><em>Accueil</em></a></li>
+                                <li><a href="cart.html" class="purpleORI disable-link"
+                                        style="font-size: 1.5rem;"><em>Votre panier</em></a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="navbar navbar-dark bg-pinkORI box-shadow">
-                    <div class="container d-flex justify-content-between">
-                        <a href="#" class="navbar-brand d-flex align-items-center">
-                            <a class="navbar-brand" href="index.html">
-                                <img class="ms-3" src="images/logo-orinoco.jpg" href="index.html"
-                                    title="titre du site e-commerce"
-                                    alt="vente internationale, meilleurs achats, site web, proposition de produits" />
-                            </a>
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
-                            aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </div>
+            </div>
+            <div class="navbar navbar-dark bg-pinkORI box-shadow">
+                <div class="container d-flex justify-content-between">
+                    <div class="align-items-center"></div>
+                    <a href="index.html" class="navbar-brand">
+                        <img class="ms-3" src="images/logo-orinoco.jpg" title="titre du site e-commerce"
+                            alt="vente internationale, meilleurs achats, site web, proposition de produits" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+                        aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                 </div>
-            </navbar>
+            </div>
+
+            <!-- Ajout d'un message d'alerte désactivable -->
+            <aside>
+                <div class="alert alert-dark alert-dismissible fade show mt-2 bg-pinkORI" role="alert">
+                    <span class="alert-heading">Découvrez notre produit en cliquant sur le bouton associé !</span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">X</span>
+                    </button>
+                </div>
+            </aside>
         </div>
     </header>
 

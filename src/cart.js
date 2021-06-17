@@ -31,35 +31,33 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Gestion du formulaire, contrôle des données
-
-function validationForm() {
-    var is_valid = document.getElementsByClassName('form-control').length === document.getElementsByClassName('valid-feedback').length;
-    // console.log(is_valid);
+// function validationForm() {
+//     var is_valid = document.getElementsByClassName('form-control').length === document.getElementsByClassName('valid-feedback').length;
+//     // console.log(is_valid);
     
-    console.log(document.getElementsByClassName('valid-feedback'));
-    console.log(document.getElementsByClassName('form-control'));
+//     console.log(document.getElementsByClassName('valid-feedback'));
+//     console.log(document.getElementsByClassName('form-control'));
 
-    prenom = document.getElementById('prenom').value;
-    nom = document.getElementById('nom').value;
+//     prenom = document.getElementById('prenom').value;
+//     nom = document.getElementById('nom').value;
 
-    if (prenom == "" || nom == "") {
-        return false;
-    } else if (!isNaN(prenom) || !isNaN(nom)) {
-    alert('Votre prénom ou votre nom ne doit pas contenir des caractères numériques numeriques');
-    return false;
-    }
-    else {
-        return true;
-    }
-  }
+//     if (prenom == "" || nom == "") {
+//         return false;
+//     } else if (!isNaN(prenom) || !isNaN(nom)) {
+//     alert('Votre prénom ou votre nom ne doit pas contenir des caractères numériques numeriques');
+//     return false;
+//     }
+//     else {
+//         return true;
+//     }
+//   }
 
-  function checkprenom() {
+//   function checkprenom() {
 
-    var prenom=document.getElementById('prenom').value;
-    if( !isNaN(prenom)){
-        document.getElementById('prenom').style.borderColor = "red";
-    }else{
-        document.getElementById('prenom').style.borderColor = "green";
-    }
-  }
-  
+//     var prenom=document.getElementById('prenom').value;
+//     if( !isNaN(prenom)){
+//         document.getElementById('prenom').style.borderColor = "red";
+//     }else{
+//         document.getElementById('prenom').style.borderColor = "green";
+//     }
+//   }

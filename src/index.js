@@ -1,14 +1,19 @@
-// Ajout d'un eventListener sur le document qui est trigger quand la page a fini de charger puis requete GET sur l'API
+// Implémentation de l'Index avec d'abord un ajout d'un eventListener sur le document qui est trigger
 document.addEventListener("DOMContentLoaded", function () {
+  insertCamerasIntoHTML();
+});
+
+function insertCamerasIntoHTML() {
+  // Quand la page a fini de charger puis requete GET sur l'API
   fetch('http://localhost:3000/api/cameras').then(function (response) {
     // En cas de succes de la requete a l'API on parse la reponse en JSON
     // On stock l'element html qui va nous servir a contenir le html des cameras dans une variable camerasContainer
     response.json().then(function (data) {
       const camerasContainer = document.getElementById('cameras_container');
 
-      // On boucle sur l'objet qui correspond à la reponse JSON de l'API pour passer sur chaque cameras que l'API nous a retourner
-      // Pour chacune des cameras on génère du html qu'on vient ensuite insérer les uns à la suite des autres dans le container
+      // On itère/boucle sur l'objet qui correspond à la reponse JSON de l'API pour passer sur chaque cameras que l'API nous a retourné
       for (const camera of data) {
+        // Pour chacune des caméras on génère du HTML qu'on vient ensuite insérer les uns à la suite des autres dans le container
         let html = `
           <div class="col">
             <div class="card shadow-sm">
@@ -40,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-});
+}
 
 // // Méthode d'appel JS moderne de 2018 et ajout de la librairie query.js :
 // import retrieveContent from './query.js';

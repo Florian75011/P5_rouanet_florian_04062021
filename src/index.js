@@ -1,19 +1,19 @@
-// Implémentation de l'Index avec d'abord un ajout d'un eventListener sur le document qui est trigger
+// Implémentation de l'Index avec un ajout d'un eventListener sur le document qui est trigger
 document.addEventListener("DOMContentLoaded", function () {
   insertCamerasIntoHTML();
 });
 
 function insertCamerasIntoHTML() {
-  // Quand la page a fini de charger puis requete GET sur l'API
+  // Quand la page a fini de charger, on effectue une requête GET sur l'API
   fetch('http://localhost:3000/api/cameras').then(function (response) {
-    // En cas de succes de la requete a l'API on parse la reponse en JSON
-    // On stock l'element html qui va nous servir a contenir le html des cameras dans une variable camerasContainer
+    // On parse la variable réponse au format JSON et on attribut data en paramètre pour les données
     response.json().then(function (data) {
+      // On stock l'element HTML qui va nous servir à contenir le HTML des caméras dans une variable
       const camerasContainer = document.getElementById('cameras_container');
 
-      // On itère/boucle sur l'objet qui correspond à la reponse JSON de l'API pour passer sur chaque cameras que l'API nous a retourné
+      // On déclare une itération sur la variable html en fonction des données de la caméra
       for (const camera of data) {
-        // Pour chacune des caméras on génère du HTML qu'on vient ensuite insérer les uns à la suite des autres dans le container
+        // Boucle sur la variable pour afficher la bonne caméra
         let html = `
           <div class="col">
             <div class="card shadow-sm">
@@ -40,14 +40,14 @@ function insertCamerasIntoHTML() {
             </div>
           </div>
         `;
-
+        // On vient ensuite générer le HTML les uns à la suite des autres dans le container
         camerasContainer.innerHTML += html
       }
     });
   });
 }
 
-// // Méthode d'appel JS moderne de 2018 et ajout de la librairie query.js :
+// // Méthode d'appel JS moderne de 2018 et ajout de la librairie query.js par OC :
 // import retrieveContent from './query.js';
 
 // async function showContent() {

@@ -38,12 +38,41 @@ function insertCartIntoHTML() {
 // Gestion du submit du formulaire
 function addSubmitListenerToForm() {
     //Placement du tuto formulaire de P. Giraud BootStrap/JS pour checker la validité des informations
-        // Récupération de la valeur de l'input de chaque onglet du formulaire
-        // Renvoie le tableau de caméras soit le panier en ne prenant que son ID
-    }
+    let form = document.getElementById('cart-form');
+    form.addEventListener('submit', function (event) {
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+            form.classList.add('was-validated');
+            return;
+        }
+
+        // On contient les données du panier dans l'envoie du formulaire (parser et récupération d'objet dans le localStorage)
+        const panier = JSON.parse(localStorage.getItem('my-cart')) || [];
+
+        // Récupération de la valeur de l'input de chaque onglet du formulaire dans une constante
+        const contact = {
+            firstName: document.getElementById('prenom').value,
+            lastName: document.getElementById('nom').value,
+            email: document.getElementById('email').value,
+            address: document.getElementById('address').value,
+            city: document.getElementById('ville').value
+        };
+        // Renvoie nouveau tableau de caméras du panier en ne retournant que son ID
+        const products = panier.map(camera => camera.id);
+
+        sendOrderToBackEnd(contact, products);
+
+        // Eviter blocage de la machine avec un traitement infini
+        event.preventDefault();
+        event.stopPropagation();
+    }, false);
+}
 
 function sendOrderToBackEnd(contact, products) {
     // Cibler l'API avec un fetch, requête POST et fonction
     // Renvoyer un nouveau tableau et récupérer le local storage + JSON
     // Ajouter et afficher chaque valeur sur la page de confirmation
+
+    // fetch, POST, response.json, localStorage, getElement, window.location.href = `confirmation.html?`, etc.
 }

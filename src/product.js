@@ -51,7 +51,7 @@ function insertCameraIntoProductHTML() {
 
 // Récupération des informations de la caméra sur laquelle on a cliqué et qui s'affiche en page produit (possibilité d'ajout des élements (caméras) dans le panier par ID respectives
 function addClickListenerOnCartButton() {
-    // On ajoute un eventListener sur l'element qui a pour id "my-cart" qui sera trigger au clique sur cet élément
+    // On ajoute un eventListener sur l'element qui a pour id "my-cart" et qui sera trigger au clique sur cet élément
     document.getElementById("my-cart").addEventListener('click', function () {
         // Variable dans laquelle on vient stocker un objet représentant les informations de la caméra (recupérées dans le HTML)
         const productData = document.getElementById('camera').dataset;

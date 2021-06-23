@@ -108,26 +108,26 @@
               <div class="col-md-4 mb-3">
                 <label for="prenom">Prénom</label>
                 <input onkeypress="return /[^0-9]+/.test(event.key)" type="text" class="form-control" id="prenom"
-                  onblur="checkprenom()" name="prenom" placeholder="Pierre" required>
+                  onblur="checkprenom()" name="prenom"  minlength="3" maxlength="20" placeholder="Pierre" required>
               </div>
               <div class="col-md-4 mb-3">
                 <label for="nom">Nom de famille</label>
                 <input onkeypress="return /[^0-9]+/.test(event.key)" type="text" class="form-control" id="nom"
-                  name="nom" placeholder="Giraud" required>
+                  name="nom"  minlength="3" maxlength="20" placeholder="Giraud" required>
               </div>
               <div class="form-group col-md-4 mb-3">
                 <label for="email">Entrez votre mail</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="pierre.giraud@edhec.com"
+                <input type="email" class="form-control" id="email" name="email" minlength="3" maxlength="20" placeholder="pierre.giraud@edhec.com"
                   required>
               </div>
               <div class="form-row">
                 <div class="col-md-4 mb-3">
                   <label for="address">Adresse</label>
-                  <input type="text" class="form-control" id="address" name="address" placeholder="Adresse" required>
+                  <input type="text" class="form-control" id="address" name="address"  minlength="3" maxlength="30" placeholder="Adresse" required>
                 </div>
                 <div class="col-md-4 mb-3">
                   <label for="ville">Ville</label>
-                  <input onkeypress="return /[^0-9]+/.test(event.key)" type="text" class="form-control" id="ville"
+                  <input onkeypress="return /[^0-9]+/.test(event.key)" type="text" class="form-control"  minlength="3" maxlength="20" id="ville"
                     name="ville" placeholder="Ville" required>
                 </div>
               </div>

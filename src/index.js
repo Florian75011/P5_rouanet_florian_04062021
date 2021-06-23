@@ -5,11 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function insertCamerasIntoHTML() {
   // Quand la page a fini de charger, on effectue une requête GET sur l'API
-  fetch('http://localhost:3000/api/cameras').then(function (response) {
+  fetch("http://localhost:3000/api/cameras").then(function (response) {
     // On parse la variable réponse au format JSON et on attribut data en paramètre pour les données
     response.json().then(function (data) {
       // On stock l'element HTML qui va nous servir à contenir le HTML des caméras dans une variable
-      const camerasContainer = document.getElementById('cameras_container');
+      const camerasContainer = document.getElementById("cameras_container");
 
       // On déclare une itération sur la variable html en fonction des données de la caméra
       for (const camera of data) {
@@ -41,7 +41,7 @@ function insertCamerasIntoHTML() {
           </div>
         `;
         // On vient ensuite générer le HTML les uns à la suite des autres dans le container
-        camerasContainer.innerHTML += html
+        camerasContainer.innerHTML += html;
       }
     });
   });

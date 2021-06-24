@@ -1,29 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const prenom = new URLSearchParams(window.location.search).get('prenom');
-    const nom = new URLSearchParams(window.location.search).get('nom');
-    let msg = "Bonjour <strong>" + prenom + " " + nom + "</strong>," + "<br/>Nous vous remercions pour vos achats !";
-    document.getElementById('msg').innerHTML += msg;
+  // Instanciation d'une nouvelle boîte paramètreURL localisée/recherchée
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  // Intégration du résultat des trois fonctions (nom client, prix total, ID order en HTML) dans la constante
+  insertClientNameIntoHTML(urlSearchParams);
+  insertTotalPriceIntoHTML(urlSearchParams);
+  insertOrderIdIntoHTML(urlSearchParams);
 });
 
-// Afficher du calcul du prix total
-// document.addEventListener("DOMContentLoaded", function () {
-//     let totalPrice = 0;
-//     const panier = JSON.parse(localStorage.getItem('my-cart')) || [];
-//     const cartContainer = document.getElementById('cart-container');
+function insertClientNameIntoHTML(urlSearchParams) {
+  // Les get servent à prendre la valeur associée concernée depuis le formulaire
+  const prenom = urlSearchParams.get("prenom");
+  const nom = urlSearchParams.get("nom");
 
-//     const totalPriceHtml = `
-//     <tr class="bg-white">
-//         <td></td>
-//         <td>Prix total</td>
-//         <td>${totalPrice}€</td>
-//     </tr>
-//     `;
-//     cartContainer.innerHTML += priceHtml;
-// });
+  // Insertion de l'affichage en page HTML
+  document.getElementById("name").innerHTML += `${prenom} ${nom}`;
+}
 
-//Gestion du changement de page et envoie du formulaire
-// Gestion d'envoie de formulaire de commande
+function insertTotalPriceIntoHTML(urlSearchParams) {
+  const totalPrice = urlSearchParams.get("total_price");
 
-// Gestion de l'identifiant de commande
-// POST /order - Requête JSON contenant un objet de contact et un
-// tableau de produits - Retourne l'objet contact, le tableau produits et order_id (string)
+  document.getElementById("total-price").innerHTML += totalPrice;
+}
+
+function insertOrderIdIntoHTML(urlSearchParams) {
+  orderId = urlSearchParams.get("order_id");
+
+  document.getElementById("id-com").innerHTML += orderId;
+}

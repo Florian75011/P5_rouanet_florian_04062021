@@ -1,7 +1,12 @@
 // A l'affichage de cette page on appelle les fonctions du panier et du formulaire
 document.addEventListener("DOMContentLoaded", function () {
   insertCartIntoHTML();
+  // try {
   addSubmitListenerToForm();
+  // }
+  // catch (error) {
+  //   console.error(error, "Erreur user !");
+  // }
 });
 
 // Gestion du panier avec définition du prix à 0, puis "soit panier est rempli soit il renvoie un tableau vide" en objet JS à injecter dans le <t body> :

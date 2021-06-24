@@ -85,10 +85,22 @@
 
     <!-- Message de confirmation d'achat et bouton de retour -->
     <main class="w-full bg-oniPink rounded-lg my-4 py-16 flex justify-center flex-col">
-        <p class="display-5 text-center text-4xl font-bold mb-4" id="msg"></p>
-        <p class="display-6 text-center text-xl mb-4">Voici l'identifiant de votre commande : </p>
-        <!-- Ici attribuer un identifiant de commande propre et afficher le prix total -->
+        <br>
+        <p class="display-5 text-center text-4xl font-bold mb-4 bg-pinkORI" id="msg">
+            Bonjour <strong id="name"></strong>,
+            <br />
+            Nous vous remercions pour vos achats !
+        </p>
+        <br>
+        <p class="display-6 text-center text-xl mb-4 bg-pinkORI">Prix total : <strong id="total-price"></strong></p>
+        <br>
+        <p class="display-6 text-center text-xl mb-4 bg-pinkORI">Voici l'identifiant de votre commande :
+            <br>
+            <strong id="id-com"></strong></p>
+            <br>
+        <!-- Ici attribuer l'identifiant de commande propre et afficher le prix total -->
 
+        <br>
         <div class="text-center">
             <a href="index.html">
                 <button class="btn bg-purpleORI text-white mt-2 ms-2" type="submit"
@@ -97,6 +109,7 @@
                 </button>
             </a>
         </div>
+        <br>
     </main>
 
     <!-- Bas de page informatif -->

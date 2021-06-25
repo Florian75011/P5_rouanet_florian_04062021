@@ -30,7 +30,7 @@ function insertCamerasIntoHTML() {
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <a href="product.html?camera_id=${camera._id}">
-                      <button type="button" class="btn btn-lg btn-outline-secondary btn-outline-ORI">Découvrir notre
+                      <button type="button" class="btn btn-lg btn-outline-secondary">Découvrir notre
                         caméra
                       </button>
                     </a>

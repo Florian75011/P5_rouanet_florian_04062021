@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Instanciation d'une nouvelle boîte paramètreURL localisée/recherchée
+  // Création d'un nouvel objet (instanciation) contenant les paramètres contenus dans l'URL (paramètreURL, localisé/recherché)
   const urlSearchParams = new URLSearchParams(window.location.search);
   // Intégration du résultat des trois fonctions (nom client, prix total, ID order en HTML) dans la constante
   insertClientNameIntoHTML(urlSearchParams);
@@ -23,7 +23,7 @@ function insertTotalPriceIntoHTML(urlSearchParams) {
 }
 
 function insertOrderIdIntoHTML(urlSearchParams) {
-  orderId = urlSearchParams.get("order_id");
+  const orderId = urlSearchParams.get("order_id");
 
   document.getElementById("id-com").innerHTML += orderId;
 }

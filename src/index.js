@@ -44,6 +44,9 @@ function insertCamerasIntoHTML() {
         camerasContainer.innerHTML += html;
       }
     });
+  }).then(function(data) {
+    // méthode de "catch error" simplifiée envisagée
+    // console.log(data);
   });
 }
 

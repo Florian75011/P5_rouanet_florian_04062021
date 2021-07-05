@@ -54,7 +54,7 @@ function addSubmitListenerToForm() {
         return;
       }
 
-      // On contient les données du panier dans l'envoie du formulaire (parser et récupération d'objet dans le localStorage)
+      // On contient les données du panier dans l'envoie du formulaire (parser + récupération d'objet dans le localStorage)
       const panier = JSON.parse(localStorage.getItem("my-cart")) || [];
 
       // Récupération de la valeur de l'input de chaque onglet du formulaire dans une constante
@@ -92,7 +92,7 @@ function sendOrderToBackEnd(contact, products) {
       contact: contact,
       products: products,
     }),
-    // On passe les headers crée précédemment en tant que header de la requête à l'API
+    // On ajoute simplement les headers à la requête que l'on va envoyer au back-end (en-tête de requête)
     headers: headers,
   }).then(function (response) {
     response.json().then(function (data) {

@@ -62,7 +62,7 @@ function insertCameraIntoProductHTML() {
       // Ecoute pour faire marcher la fonction de click du dessous
       addClickListenerOnCartButton();
     }).catch(function(error) {
-      console.log("Il y a eu un problème avec l'opération fetch: " + error.message);
+      console.log("Il y a eu un problème avec l'opération JSON: " + error.message);
     });
   }).catch(function(error) {
     console.log("Il y a eu un problème avec l'opération fetch: " + error.message);

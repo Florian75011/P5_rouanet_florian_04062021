@@ -43,10 +43,11 @@ function insertCamerasIntoHTML() {
         // On vient ensuite générer le HTML les uns à la suite des autres dans le container
         camerasContainer.innerHTML += html;
       }
+    }).catch(function(error) {
+      console.log("Il y a eu un problème avec l'opération fetch: " + error.message);
     });
-  }).then(function(data) {
-    // méthode de "catch error" simplifiée envisagée
-    // console.log(data);
+  }).catch(function(error) {
+    console.log("Il y a eu un problème avec l'opération fetch: " + error.message);
   });
 }
 

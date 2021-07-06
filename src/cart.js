@@ -104,6 +104,10 @@ function sendOrderToBackEnd(contact, products) {
       )[0].innerText;
       // Méthode de redirection pour passer sur la page suivante avec les data à récupérer puis à afficher
       window.location.href = `confirmation.html?nom=${data.contact.lastName}&prenom=${data.contact.firstName}&order_id=${data.orderId}&total_price=${totalPrice}`;
+    }).catch(function(error) {
+      console.log("Il y a eu un problème avec l'opération fetch: " + error.message);
     });
+  }).catch(function(error) {
+    console.log("Il y a eu un problème avec l'opération fetch: " + error.message);
   });
 }
